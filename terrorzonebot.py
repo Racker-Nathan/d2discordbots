@@ -25,5 +25,3 @@ def main(event):
 
 def lambda_handler(event, context):
     main(event)
-
-lambda_handler(event, context)
