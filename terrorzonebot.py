@@ -1,15 +1,13 @@
 from discord import SyncWebhook
 import requests
 import os
-event = []
-context = []
 
 TERRORZONEURL = "https://d2runewizard.com/api/terror-zone"
 D2RW_TOKEN = os.environ.get('D2RUNEWIZARDTOKEN')
 CONTACT = os.environ.get('CONTACT')
 PARAMETERS = {'token': D2RW_TOKEN}
 HEADERS = {'D2R-Contact': CONTACT, 'D2R-Platform': 'Discord', 'D2R-Repo': 'https://github.com/Racker-Nathan/d2discordbots'}
-WEBHOOK = 'https://discord.com/api/webhooks/1097987262349848596/IZecxSYb99YBUnUYeMpmS2NHZRm4lm6FIwYn-DcGMEGdHFwDW6ny1K_2wzVYu075scWS'
+WEBHOOK = os.environ.get('WEBHOOK')
 
 def webhook():
     webhook = SyncWebhook.from_url(WEBHOOK)
